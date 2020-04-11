@@ -7,22 +7,26 @@ namespace snake
     {
         static void Main(string[] args)
         {
+            Console.SetWindowSize(80, 50);
             
-            var p1 = new Point(1,3,'*');
-            p1.draw();
-            var p2 = new Point(4,5,'#');
-            p2.draw();
-            List<Point> pList = new List<Point>();
-            pList.Add(p1);
-            pList.Add(p2);
-
+            var p = new Point(4,3,'*');
+            
+            
+            //List<Point> pList = new List<Point>();
             
 
-            HorizontalLine hline = new HorizontalLine(5,10,8,'+');
-            hline.draw();
+            
+
+            HorizontalLine topline = new HorizontalLine(0,79,0,'+');
+            HorizontalLine bottomline = new HorizontalLine(0, 79, 49, '+');
+            VerticalLine leftline = new VerticalLine(0, 49, 0, '+');
+            VerticalLine rightline = new VerticalLine(0, 49, 79, '+');
+
+            var s = new Snake(p, 4, Direction.RIGHT);
+            
             Console.ReadLine();
-            VerticalLine vline = new VerticalLine(8, 13, 10, '+');
-            vline.draw();
+            s.draw();
+
         }
         
     }
