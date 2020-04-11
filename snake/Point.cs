@@ -59,5 +59,9 @@ namespace snake
         {
             return x + ", " + y + ", " + sym;
         }
+        public bool isHit(Point p)
+        {
+            return p.x == this.x && p.y == this.y;
+        }
     }
 }
