@@ -31,6 +31,11 @@ namespace snake
             Console.SetCursorPosition(x, y);
             Console.Write(sym);
         }
+        public void clear()
+        {
+            sym = ' ';
+            draw();
+        }
         public void move(int offset, Direction direction)
         {
             if (direction==Direction.LEFT)
