@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace snake
 {
@@ -10,7 +11,11 @@ namespace snake
             p1.draw();
             var p2 = new Point(4,5,'#');
             p2.draw();
+            List<Point> pList = new List<Point>();
+            pList.Add(p1);
+            pList.Add(p2);
 
+            Console.ReadLine();
         }
         
     }
