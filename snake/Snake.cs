@@ -24,19 +24,38 @@ namespace snake
         {
             Point tail = pList.First();
             pList.Remove(tail);
-            Point head = GetNextPoint();
+            Point head = getNextPoint();
             pList.Add(head);
 
             tail.clear();
             head.draw();
         }
 
-        private Point GetNextPoint()
+        private Point getNextPoint()
         {
             Point head = pList.Last();
             Point nextPoint = new Point(head);
             nextPoint.move(1, direction);
             return nextPoint;
+        }
+        public void controller(ConsoleKey key)
+        {
+            if (key == ConsoleKey.LeftArrow)
+            {
+                direction = Direction.LEFT;
+            }
+            else if (key == ConsoleKey.RightArrow)
+            {
+                direction = Direction.RIGHT;
+            }
+            else if (key == ConsoleKey.DownArrow)
+            {
+                direction = Direction.DOWN;
+            }
+            else if (key == ConsoleKey.UpArrow)
+            {
+                direction = Direction.UP;
+            }
         }
     }
 }
