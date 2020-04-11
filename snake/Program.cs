@@ -6,7 +6,22 @@ namespace snake
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Started the SNAKE project");
+            int x1 = 1;
+            int y1 = 3;
+            char sym1 = '*';
+
+            int x2 = 4;
+            int y2 = 5;
+            char sym2 = '#';
+
+            draw(x1, y1, sym1);
+            draw(x2, y2, sym2);
+            Console.ReadLine();
+        }
+        static void draw(int x, int y, char sym)
+        {
+            Console.SetCursorPosition(x, y);
+            Console.Write(sym);
         }
     }
 }
